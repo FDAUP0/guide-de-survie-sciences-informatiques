@@ -1,6 +1,12 @@
 public class BigDecimal {
-    /*
-     * parse exponent
+    /**Translates a character array representation of a BigDecimal into a BigDecimal, accepting the same sequence of characters as the BigDecimal(String) constructor, while allowing a sub-array to be specified.
+     * Note that if the sequence of characters is already available within a character array, using this constructor is faster than converting the char array to string and using the BigDecimal(String) constructor .
+     * @param in - char array that is the source of characters.
+     * @param offset - first character in the array to inspect.
+     * @param len - number of characters to consider.
+     * @Throws NumberFormatException - if in is not a valid representation of a BigDecimal
+     * or the defined subarray is not wholly within in.
+     *
      */
     public static long parseExp(char[] in, int offset, int len){
         long exp = 0;
